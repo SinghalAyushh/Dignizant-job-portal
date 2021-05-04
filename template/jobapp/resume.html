@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/hero_1.jpg' %}');"
+  id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="text-white font-weight-bold">Resume Builder</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+          <span class="text-white"><strong>Resume Builder</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bg-light">
+    <div class="container py-5">
+      <div class="row h-100 align-items-center py-5 d-flex">
+        <div class="col-lg-6">
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_lrw0segg.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+        </div>
+            <div class="col-lg-6">
+            <h3  style='font-size: 2em; font-weight: bolder;  color:gray;'>Build Your Resume For Free  !</h3>
+            <h4 style='font-weight: bolder; color: #007fff ; align-items: center' > Fast !  Effective ! Easy !</h4>
+            <p style='font-weight: bolder'> Buliding a resume is a daunting task: stressful, confusing, and takes too much time. But not anymore </p>
+         <a href ="{%url  'jobapp:builder'%}" ><button class="btn " style="background-color:#007fff;color:white ; font-size: 1.2em; border-radius: 2rem;"> Get Started ></button></a>  
+            </div>
+       
+</div>
+</div>
+</div>
+{% endblock %}
